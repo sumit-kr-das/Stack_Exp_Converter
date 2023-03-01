@@ -52,7 +52,7 @@ function postToPre(post_exp) {
 let post_exp = "ABC/-AK/L-*";
 
 // Function call
-document.write("Prefix : " + postToPre(post_exp));
+// document.write("Prefix : " + postToPre(post_exp));
 
 // This code is contributed by suresh07.
 function postpre() {

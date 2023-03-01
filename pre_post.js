@@ -1,7 +1,4 @@
-// Javascript Program to convert prefix to postfix
 
-// function to check if character
-// is operator or not
 function isOperator(x) {
 	switch (x) {
 		case "+":
@@ -49,7 +46,7 @@ function preToPost(pre_exp) {
 }
 
 let pre_exp = "*-A/BC-/AKL";
-document.write("Postfix : " + preToPost(pre_exp));
+// document.write("Postfix : " + preToPost(pre_exp));
 
 // This code is contributed by suresh07.
 function prepo() {

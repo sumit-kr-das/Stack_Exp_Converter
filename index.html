@@ -17,8 +17,9 @@
 	</head>
 	<body>
 		<nav>
-			<a href="#">
+			<a href="/">
 				<img src="./logo.png" alt="img" />
+				<h2>Stack Exp Converter v1.1</h2>
 			</a>
 			<div>
 				<button>Contact Us</button>
@@ -26,41 +27,51 @@
 		</nav>
 		<header>
 			<div>
-				<button class="tablink" onclick="openPage('Home', this, 'red')">
+				<button class="tablink" onclick="openPage('Home', this, '#282A35')">
 					Infix to Postfix
 				</button>
 				<button
 					class="tablink"
-					onclick="openPage('News', this, 'green')"
+					onclick="openPage('News', this, '#282A35')"
 					id="defaultOpen"
 				>
 					Infix to Prefix
 				</button>
-				<button class="tablink" onclick="openPage('Contact', this, 'blue')">
+				<button class="tablink" onclick="openPage('Contact', this, '#282A35')">
 					Prefix to Infix
 				</button>
-				<button class="tablink" onclick="openPage('About', this, 'orange')">
+				<button class="tablink" onclick="openPage('About', this, '#282A35')">
 					Prefix to Postfix
 				</button>
-				<button class="tablink" onclick="openPage('About1', this, 'blue')">
+				<button class="tablink" onclick="openPage('About1', this, '#282A35')">
 					Postfix to Infix
 				</button>
-				<button class="tablink" onclick="openPage('About2', this, 'orange')">
+				<button class="tablink" onclick="openPage('About2', this, '#282A35')">
 					Postfix to Prefix
 				</button>
 			</div>
 			<div id="Home" class="tabcontent">
-				<input type="text" name="Enter your expression" id="i_p" />
-				<button onclick="infix_post()">Convert</button>
-				<h3>Home</h3>
-				<p id="text">Home is where the heart is..</p>
+				<div class="wrapper">
+					<h1>Infix to Postfix</h1>
+					<div class="input_div">
+						<input type="text" placeholder="Enter your expression" id="i_p" />
+						<button onclick="infix_post()">Convert</button>
+					</div>
+					<h2>Answer:</h2>
+					<p id="text">...</p>
+				</div>
 			</div>
 
 			<div id="News" class="tabcontent">
-				<input type="text" name="Enter your expression" id="i_pre" />
-				<button onclick="inprf()">Convert</button>
-				<h3>Home</h3>
-				<p id="i_f">Home is where the heart is..</p>
+				<div class="wrapper">
+					<h1>Infix to Prefix</h1>
+					<div class="input_div">
+						<input type="text" placeholder="Enter your expression" id="i_pre" />
+						<button onclick="inprf()">Convert</button>
+					</div>
+					<h2>Answer:</h2>
+					<p id="i_f">...</p>
+				</div>
 			</div>
 
 			<div id="Contact" class="tabcontent">
@@ -91,11 +102,45 @@
 				<p id="p_preee">Home is where the heart is..</p>
 			</div>
 		</header>
+		<div>
+			<svg
+				style="background-color: #d9eee1"
+				width="100%"
+				height="70"
+				viewBox="0 0 100 100"
+				preserveAspectRatio="none"
+			>
+				<path
+					id="wavepath"
+					d="M0,0  L110,0C35,150 35,0 0,100z"
+					fill="#282A35"
+				></path>
+			</svg>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div>
+					<img src="./avatar.jfif" alt="avatar" />
+				</div>
+				<div>
+					<p>
+						HI I’M SUMIT, I BUILD THINGS FOR THE WEB. A passionate software
+						developer having an experience of building,deployment and
+						maintaining Web applications with ReactJS, Nodejs, MongoDB and some
+						other cool libraries and frameworks.
+					</p> <br>
+					<p><b>www.sumitkumardas.com</b></p>
+				</div>
+			</div>
+		</div>
+		<footer class="">
+			<p>@ Copyright 2022. Designed by Sumit Kumar Das.</p>
+		</footer>
 		<script src="./script.js"></script>
 		<script src="./infix_prefix.js"></script>
 		<script src="./pre_in.js"></script>
 		<script src="./pre_post.js"></script>
 		<script src="./post_in.js"></script>
-        <script src="./post_pre.js"></script>
+		<script src="./post_pre.js"></script>
 	</body>
 </html>

@@ -5,15 +5,18 @@
 }
 
 body {
+	background-color: #d9eee1;
 }
 
 p,
 h1,
+h2,
 a {
 	font-family: "Source Sans Pro", sans-serif;
 }
 
 nav {
+	background-color: #fff;
 	padding: 0.8rem 2rem;
 	display: flex;
 	align-items: center;
@@ -24,11 +27,14 @@ nav {
 nav a {
 	display: flex;
 	align-items: center;
+	text-decoration: none;
+	color: #000;
+	font-size: 1.2rem;
 }
 
 nav a img {
-	width: 40px;
-	height: 40px;
+	width: 80px;
+	height: 90px;
 }
 
 nav button {
@@ -38,16 +44,16 @@ nav button {
 	padding: 0.5rem 0.8rem;
 	border-radius: 1rem;
 	cursor: pointer;
-	font-size: 0.6rem;
+	font-size: 1rem;
 }
 
 header {
-	background-color: #282a35;
-	height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	background-color: #ffffff;
+	height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
 /* Style tab links */
@@ -73,26 +79,113 @@ header {
 	display: none;
 	padding: 100px 20px;
 	height: 100%;
-    width: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.tabcontent .wrapper {
+	/* background-color: red; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.tabcontent .wrapper h1 {
+	font-size: 4rem;
+}
+
+.tabcontent .wrapper .input_div {
+	display: flex;
+	align-items: center;
+	margin: 2rem 0;
+}
+
+.tabcontent .wrapper .input_div input {
+	border: none;
+	padding: 10px 20px;
+	font-size: 1.2rem;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.tabcontent .wrapper .input_div button {
+	background-color: rgb(4, 170, 109);
+	border: none;
+	padding: 11px 20px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	color: #fff;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.tabcontent .wrapper .input_div button:hover {
+	background-color: rgb(4, 126, 81);
+}
+
+.tabcontent .wrapper p {
+	font-size: 2rem;
 }
 
 #Home {
-	background-color: red;
+	background-color: #282a35;
 }
 #News {
-	background-color: green;
+	background-color: #282a35;
 }
 #Contact {
-	background-color: blue;
+	background-color: #282a35;
 }
 #About {
-	background-color: orange;
+	background-color: #282a35;
 }
 
 #About1 {
-	background-color: rgb(215, 109, 22);
+	background-color: #282a35;
 }
 
 #About2 {
-	background-color: rgb(30, 164, 221);
+	background-color: #282a35;
+}
+
+/* footer */
+
+.footer {
+	background-color: #d9eee1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer .container {
+	padding: 4rem;
+	display: flex;
+	align-items: center;
+}
+
+.footer .container > div {
+	width: 40%;
+}
+
+.footer .container div:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer .container img {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+}
+
+footer {
+	background-color: #282a35;
+	color: #fff;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
