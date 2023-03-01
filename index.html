@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Stack Operation</title>
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- styles -->
+		<link rel="stylesheet" href="./styles/style.css" />
+	</head>
+	<body>
+		<nav>
+			<a href="#">
+				<img src="./logo.png" alt="img" />
+			</a>
+			<div>
+				<button>Contact Us</button>
+			</div>
+		</nav>
+		<header>
+			<div>
+				<button class="tablink" onclick="openPage('Home', this, 'red')">
+					Infix to Postfix
+				</button>
+				<button
+					class="tablink"
+					onclick="openPage('News', this, 'green')"
+					id="defaultOpen"
+				>
+					Infix to Prefix
+				</button>
+				<button class="tablink" onclick="openPage('Contact', this, 'blue')">
+					Prefix to Infix
+				</button>
+				<button class="tablink" onclick="openPage('About', this, 'orange')">
+					Prefix to Postfix
+				</button>
+				<button class="tablink" onclick="openPage('About1', this, 'blue')">
+					Postfix to Infix
+				</button>
+				<button class="tablink" onclick="openPage('About2', this, 'orange')">
+					Postfix to Prefix
+				</button>
+			</div>
+			<div id="Home" class="tabcontent">
+				<input type="text" name="Enter your expression" id="i_p" />
+				<button onclick="infix_post()">Convert</button>
+				<h3>Home</h3>
+				<p id="text">Home is where the heart is..</p>
+			</div>
+
+			<div id="News" class="tabcontent">
+				<input type="text" name="Enter your expression" id="i_pre" />
+				<button onclick="inprf()">Convert</button>
+				<h3>Home</h3>
+				<p id="i_f">Home is where the heart is..</p>
+			</div>
+
+			<div id="Contact" class="tabcontent">
+				<input type="text" name="Enter your expression" id="pre_in" />
+				<button onclick="prein()">Convert</button>
+				<h3>Home</h3>
+				<p id="p_i">Home is where the heart is..</p>
+			</div>
+
+			<div id="About" class="tabcontent">
+				<input type="text" name="Enter your expression" id="pre_post" />
+				<button onclick="prepo()">Convert</button>
+				<h3>Home</h3>
+				<p id="p_p">Home is where the heart is..</p>
+			</div>
+
+			<div id="About1" class="tabcontent">
+				<input type="text" name="Enter your expression" id="post_inn" />
+				<button onclick="postin()">Convert</button>
+				<h3>Home</h3>
+				<p id="p_ii">Home is where the heart is..</p>
+			</div>
+
+			<div id="About2" class="tabcontent">
+				<input type="text" name="Enter your expression" id="post_pree" />
+				<button onclick="postpre()">Convert</button>
+				<h3>Home</h3>
+				<p id="p_preee">Home is where the heart is..</p>
+			</div>
+		</header>
+		<script src="./script.js"></script>
+		<script src="./infix_prefix.js"></script>
+		<script src="./pre_in.js"></script>
+		<script src="./pre_post.js"></script>
+		<script src="./post_in.js"></script>
+        <script src="./post_pre.js"></script>
+	</body>
+</html>
