@@ -1,146 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Stack Operation</title>
-		<!-- fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
-			rel="stylesheet"
-		/>
-		<!-- styles -->
-		<link rel="stylesheet" href="./styles/style.css" />
-	</head>
-	<body>
-		<nav>
-			<a href="/">
-				<img src="./logo.png" alt="img" />
-				<h2>Stack Exp Converter v1.1</h2>
-			</a>
-			<div>
-				<button>Contact Us</button>
-			</div>
-		</nav>
-		<header>
-			<div>
-				<button class="tablink" onclick="openPage('Home', this, '#282A35')">
-					Infix to Postfix
-				</button>
-				<button
-					class="tablink"
-					onclick="openPage('News', this, '#282A35')"
-					id="defaultOpen"
-				>
-					Infix to Prefix
-				</button>
-				<button class="tablink" onclick="openPage('Contact', this, '#282A35')">
-					Prefix to Infix
-				</button>
-				<button class="tablink" onclick="openPage('About', this, '#282A35')">
-					Prefix to Postfix
-				</button>
-				<button class="tablink" onclick="openPage('About1', this, '#282A35')">
-					Postfix to Infix
-				</button>
-				<button class="tablink" onclick="openPage('About2', this, '#282A35')">
-					Postfix to Prefix
-				</button>
-			</div>
-			<div id="Home" class="tabcontent">
-				<div class="wrapper">
-					<h1>Infix to Postfix</h1>
-					<div class="input_div">
-						<input type="text" placeholder="Enter your expression" id="i_p" />
-						<button onclick="infix_post()">Convert</button>
-					</div>
-					<h2>Answer:</h2>
-					<p id="text">...</p>
-				</div>
-			</div>
 
-			<div id="News" class="tabcontent">
-				<div class="wrapper">
-					<h1>Infix to Prefix</h1>
-					<div class="input_div">
-						<input type="text" placeholder="Enter your expression" id="i_pre" />
-						<button onclick="inprf()">Convert</button>
-					</div>
-					<h2>Answer:</h2>
-					<p id="i_f">...</p>
-				</div>
-			</div>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Stack Operation</title>
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap"
+		rel="stylesheet" />
+	<!-- styles -->
+	<link rel="stylesheet" href="./styles/style.css" />
+</head>
 
-			<div id="Contact" class="tabcontent">
-				<input type="text" name="Enter your expression" id="pre_in" />
-				<button onclick="prein()">Convert</button>
-				<h3>Home</h3>
-				<p id="p_i">Home is where the heart is..</p>
-			</div>
-
-			<div id="About" class="tabcontent">
-				<input type="text" name="Enter your expression" id="pre_post" />
-				<button onclick="prepo()">Convert</button>
-				<h3>Home</h3>
-				<p id="p_p">Home is where the heart is..</p>
-			</div>
-
-			<div id="About1" class="tabcontent">
-				<input type="text" name="Enter your expression" id="post_inn" />
-				<button onclick="postin()">Convert</button>
-				<h3>Home</h3>
-				<p id="p_ii">Home is where the heart is..</p>
-			</div>
-
-			<div id="About2" class="tabcontent">
-				<input type="text" name="Enter your expression" id="post_pree" />
-				<button onclick="postpre()">Convert</button>
-				<h3>Home</h3>
-				<p id="p_preee">Home is where the heart is..</p>
-			</div>
-		</header>
+<body>
+	<nav>
+		<a href="/">
+			<img src="./logo.png" alt="img" />
+			<h2>Stack Exp Converter v1.1</h2>
+		</a>
 		<div>
-			<svg
-				style="background-color: #d9eee1"
-				width="100%"
-				height="70"
-				viewBox="0 0 100 100"
-				preserveAspectRatio="none"
-			>
-				<path
-					id="wavepath"
-					d="M0,0  L110,0C35,150 35,0 0,100z"
-					fill="#282A35"
-				></path>
-			</svg>
+			<button>Contact Us</button>
 		</div>
-		<div class="footer">
-			<div class="container">
-				<div>
-					<img src="./avatar.jfif" alt="avatar" />
+	</nav>
+	<header>
+		<div>
+			<button class="tablink" onclick="openPage('Home', this, '#282A35')">
+				Infix to Postfix
+			</button>
+			<button class="tablink" onclick="openPage('News', this, '#282A35')" id="defaultOpen">
+				Infix to Prefix
+			</button>
+			<button class="tablink" onclick="openPage('Contact', this, '#282A35')">
+				Prefix to Infix
+			</button>
+			<button class="tablink" onclick="openPage('About', this, '#282A35')">
+				Prefix to Postfix
+			</button>
+			<button class="tablink" onclick="openPage('About1', this, '#282A35')">
+				Postfix to Infix
+			</button>
+			<button class="tablink" onclick="openPage('About2', this, '#282A35')">
+				Postfix to Prefix
+			</button>
+		</div>
+		<div id="Home" class="tabcontent">
+			<div class="wrapper">
+				<h1>Infix to Postfix</h1>
+				<div class="input_div">
+					<input type="text" placeholder="Enter your expression" id="i_p" />
+					<button onclick="infix_post()">Convert</button>
 				</div>
-				<div>
-					<p>
-						HI I’M SUMIT, I BUILD THINGS FOR THE WEB. A passionate software
-						developer having an experience of building,deployment and
-						maintaining Web applications with ReactJS, Nodejs, MongoDB and some
-						other cool libraries and frameworks.
-					</p> <br>
-					<p><b>www.sumitkumardas.com</b></p>
+				<h2>Answer:</h2>
+				<p id="text">...</p>
+			</div>
+		</div>
+
+		<div id="News" class="tabcontent">
+			<div class="wrapper">
+				<h1>Infix to Prefix</h1>
+				<div class="input_div">
+					<input type="text" placeholder="Enter your expression" id="i_pre" />
+					<button onclick="inprf()">Convert</button>
+				</div>
+				<h2>Answer:</h2>
+				<p id="i_f">...</p>
+			</div>
+		</div>
+
+		<div id="Contact" class="tabcontent">
+			<div class="wrapper">
+				<h1>Prefix to Infix</h1>
+				<div class="input_div">
+					<input type="text" placeholder="Enter your expression" id="pre_in" />
+					<button onclick="prein()">Convert</button>
+				</div>
+				<h2>Answer:</h2>
+				<p id="p_i">...</p>
+			</div>
+		</div>
+
+		<div id="About" class="tabcontent">
+			<div class="wrapper">
+				<h1>Prefix to Postfix</h1>
+				<div class="input_div">
+					<input type="text" placeholder="Enter your expression" id="pre_post" />
+					<button onclick="prepo()">Convert</button>
+				</div>
+				<h2>Answer:</h3>
+					<p id="p_p">...</p>
+			</div>
+		</div>
+
+		<div id="About1" class="tabcontent">
+			<div class="wrapper">
+				<h1>Postfix to Infix</h1>
+				<div class="input_div">
+					<input type="text" placeholder="Enter your expression" id="post_inn" />
+					<button onclick="postin()">Convert</button>
+				</div>
+				<h2>Answer:</h2>
+				<p id="p_ii">...</p>
+			</div>
+		</div>
+
+		<div id="About2" class="tabcontent">
+			<div class="wrapper">
+				<h1>Postfix to Prefix</h1>
+				<div class="input_div">
+					<input type="text" placeholder="Enter your expression" id="post_pree" />
+					<button onclick="postpre()">Convert</button>
+				</div>
+				<h2>Answer:</h3>
+					<p id="p_preee">...</p>
+			</div>
+		</div>
+	</header>
+	<div>
+		<svg style="background-color: #d9eee1" width="100%" height="70" viewBox="0 0 100 100"
+			preserveAspectRatio="none">
+			<path id="wavepath" d="M0,0  L110,0C35,150 35,0 0,100z" fill="#282A35"></path>
+		</svg>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div>
+				<img src="./avatar.jfif" alt="avatar" />
+			</div>
+			<div>
+				<p>
+					HI I’M SUMIT, I BUILD THINGS FOR THE WEB. A passionate software
+					developer having an experience of building,deployment and
+					maintaining Web applications with ReactJS, Nodejs, MongoDB and some
+					other cool libraries and frameworks.
+				</p> <br>
+				<p><b>www.sumitkumardas.com</b></p>
+				<div class="social_links">
+					<a href="#">
+						<ion-icon name="logo-github"></ion-icon>
+					</a>
+					<a href="#">
+						<ion-icon name="logo-linkedin"></ion-icon>
+					</a>
+					<a href="#">
+						<ion-icon name="logo-web-component"></ion-icon>
+					</a>
 				</div>
 			</div>
 		</div>
-		<footer class="">
-			<p>@ Copyright 2022. Designed by Sumit Kumar Das.</p>
-		</footer>
-		<script src="./script.js"></script>
-		<script src="./infix_prefix.js"></script>
-		<script src="./pre_in.js"></script>
-		<script src="./pre_post.js"></script>
-		<script src="./post_in.js"></script>
-		<script src="./post_pre.js"></script>
-	</body>
+	</div>
+	<footer class="">
+		<p>@ Copyright 2022. Designed by Sumit Kumar Das.</p>
+	</footer>
+	<script src="./script.js"></script>
+	<script src="./infix_prefix.js"></script>
+	<script src="./pre_in.js"></script>
+	<script src="./pre_post.js"></script>
+	<script src="./post_in.js"></script>
+	<script src="./post_pre.js"></script>
+	<!-- ion icons -->
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
